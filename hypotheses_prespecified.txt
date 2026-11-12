@@ -1,0 +1,34 @@
+﻿Step 5 - Extension experiment: does gene expression add predictive value over the clinical model,
+and does it hold up when a whole cohort is held out?
+
+PRE-SPECIFIED HYPOTHESES (copy them into the README BEFORE running the full experiment)
+  H1 (primary)   Under leave-one-cohort-out (LOCO) validation, adding mRNA expression to the clinical model
+                 increases the pooled 60-month C-index relative to model C. The effect is considered relevant
+                 only if the 95% paired-bootstrap CI of the difference excludes 0 AND the difference is >= 0.02.
+  H2 (secondary) The benefit of expression is heterogeneous across cohorts, and calibration-in-the-large per
+                 cohort does not deteriorate when expression is added.
+  A null result is an accepted outcome and is reported as such.
+
+MODELS (all evaluated on a cohort that was excluded from training)
+  C   clinical Cox model stratified by ER (same as step 03)
+  G0  clinical Cox model, ER as a covariate (isolates the effect of stratification from the effect of genes)
+  G1  elastic-net Cox model on expression only
+  G2  elastic-net Cox model on clinical variables + expression (clinical variables almost unpenalised)
+
+TUNING: the elastic-net penalty (alpha) is chosen by 5-fold CV *inside* the training cohorts (nested), genes are
+standardised on the training data only, l1_ratio is fixed at 0.5.
+
+Usage
+  python 05_expression_experiment.py --smoke   quick test (50 genes, 5 alphas); results are meaningless
+  python 05_expression_experiment.py           full experiment
+
+Outputs
+  figures/fig09_expr_delta_c.png          Differences in C-index (paired bootstrap), pooled and per cohort
+  figures/fig10_expr_c_by_cohort.png      C-index of every model, pooled and per cohort
+  figures/fig11_expr_calibration.png      Calibration-in-the-large per cohort, model C vs G2
+  figures/fig12_expr_selected_genes.png   Number of genes selected and most frequently selected genes
+  results/05_expr_loco.csv, 05_expr_calibration.csv, 05_expr_selected.csv, 05_expr_gene_coefficients.csv
+
+giovedì 12 novembre 2026 20:25:23
+
+

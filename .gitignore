@@ -1,0 +1,7 @@
+.venv/
+venv_metabric/
+metabric-env/
+__pycache__/
+*.csv
+!results/*.csv
+results/oof_repeat0.csv

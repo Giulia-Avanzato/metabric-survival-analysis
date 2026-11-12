@@ -1,0 +1,18 @@
+covariate,test_statistic,p,model
+age_at_diagnosis,0.3447284394362366,0.5571125102586753,ER as covariate
+chemotherapy,0.11793848765491344,0.731281210978562,ER as covariate
+er_status_Positive,34.81058801522629,3.6339180215756323e-09,ER as covariate
+her2_status_Positive,2.801372643686159,0.09418364384352192,ER as covariate
+hormone_therapy,3.037792871471894,0.08134645004777367,ER as covariate
+lymph_nodes_examined_positive,0.0931420043020881,0.7602201153757204,ER as covariate
+neoplasm_histologic_grade,2.1494964130538574,0.14261666081644056,ER as covariate
+radio_therapy,0.0007311128813680249,0.9784285488316267,ER as covariate
+tumor_size,0.02277733009972114,0.8800375593464939,ER as covariate
+age_at_diagnosis,2.0245804019769005,0.1547716675561749,stratified by ER
+chemotherapy,0.017408883584665344,0.8950295916488302,stratified by ER
+her2_status_Positive,2.156909278113074,0.14192992093213444,stratified by ER
+hormone_therapy,0.6476971071334992,0.4209372290372406,stratified by ER
+lymph_nodes_examined_positive,0.16289779514930677,0.6865024802060752,stratified by ER
+neoplasm_histologic_grade,0.039866547697290464,0.8417417355744867,stratified by ER
+radio_therapy,9.42602915704e-05,0.9922536408585573,stratified by ER
+tumor_size,0.7135097618449842,0.3982811125687229,stratified by ER

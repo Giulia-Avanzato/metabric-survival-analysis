@@ -1,0 +1,16 @@
+,fraction_missing
+tumor_stage,0.2632685233841303
+3-gene_classifier_subtype,0.10719915922228061
+primary_tumor_laterality,0.05570152390961639
+neoplasm_histologic_grade,0.03783499737256963
+cellularity,0.02837624802942722
+mutation_count,0.023646873357856018
+er_status_measured_by_ihc,0.015764582238570676
+type_of_breast_surgery,0.011560693641618497
+tumor_size,0.010509721492380452
+oncotree_code,0.007882291119285338
+tumor_other_histologic_subtype,0.007882291119285338
+cancer_type_detailed,0.007882291119285338
+cancer_type,0.0
+chemotherapy,0.0
+age_at_diagnosis,0.0
